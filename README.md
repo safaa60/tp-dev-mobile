@@ -1,4 +1,4 @@
-# 📱 Pointage App
+#  Pointage App
 
 Application mobile développée avec **Flutter** permettant de **certifier la présence d’un employé dans une entreprise**.
 

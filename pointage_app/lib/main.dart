@@ -2,28 +2,49 @@ import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  static MyAppState? of(BuildContext context) {
+    return context.findAncestorStateOfType<MyAppState>();
+  }
+
+  @override
+  State<MyApp> createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  ThemeMode get themeMode => _themeMode;
+
+  void toggleTheme() {
+    setState(() {
+      _themeMode =
+          _themeMode == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pointage Entreprise',
       debugShowCheckedModeBanner: false,
+      title: 'Pointage App',
+      themeMode: _themeMode,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Color(0xFFF4F6FA),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(vertical: 14, horizontal: 25),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-        ),
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
+        brightness: Brightness.light,
       ),
-      home: LoginScreen(),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
+        brightness: Brightness.dark,
+      ),
+      home: const LoginScreen(),
     );
   }
 }

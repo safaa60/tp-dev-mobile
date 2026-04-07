@@ -1,85 +1,140 @@
-# Pointage App 📱
+# 📱 Pointage App
 
-Application mobile développée avec **Flutter** permettant de gérer le **pointage des utilisateurs** (présence, connexion, etc.).
+Application mobile développée avec **Flutter** permettant de **certifier la présence d’un employé dans une entreprise**.
 
-## 📌 Description
-
-Cette application permet aux utilisateurs de :
-
-* se connecter à l’application
-* enregistrer leur présence
-* consulter leurs informations de pointage
-* gérer les données de présence de manière simple
-
-L'application est développée avec **Flutter** et fonctionne sur **Android**.
+L’utilisateur se connecte à l’application puis **signe directement sur l’écran** pour valider sa présence.
 
 ---
 
-## 🛠️ Technologies utilisées
+# 📌 Fonctionnalités
+
+* 🔐 Authentification avec **email et mot de passe**
+* ✍️ **Signature sur écran** pour certifier la présence
+* 🌙 **Mode clair / mode sombre**
+* 📜 **Historique des présences**
+* 🚪 **Déconnexion utilisateur**
+
+---
+
+# 🛠️ Technologies utilisées
 
 * **Flutter**
 * **Dart**
-* **Android Studio**
-* **Gradle**
+* **Gradle** (build Android)
+* **Android Studio / VS Code**
 
 ---
 
-## 📂 Structure du projet
+# 📦 Packages utilisés
+
+| Package            | Description                                  |
+| ------------------ | -------------------------------------------- |
+| signature          | Permet de dessiner une signature sur l’écran |
+| intl               | Formatage de la date et de l’heure           |
+| shared_preferences | Stockage local de données                    |
+
+---
+
+# 📂 Structure du projet
 
 ```
-pointage_app/
-│
-├── lib/
-│   ├── main.dart
-│   ├── screens/
-│   ├── widgets/
-│   └── services/
-│
-├── android/
-├── ios/
-├── pubspec.yaml
-└── README.md
+lib/
+ ├── main.dart
+ │
+ ├── models/
+ │   └── pointage.dart
+ │
+ ├── screens/
+ │   ├── login_screen.dart
+ │   ├── home_screen.dart
+ │   └── historique_screen.dart
+ │
+ └── services/
+     └── pointage_service.dart
 ```
 
 ---
 
-## ⚙️ Installation du projet
+# 🔑 Authentification
+
+L'application utilise une **authentification locale** (sans base de données).
+
+Identifiants de test :
+
+```
+Email : admin@gmail.com
+Mot de passe : 123456
+```
+
+---
+
+# ✍️ Validation de présence
+
+Pour certifier la présence :
+
+1. L'utilisateur se connecte
+2. Il signe sur l’écran avec son doigt
+3. Il clique sur **Valider la présence**
+4. La présence est enregistrée avec :
+
+   * la **date**
+   * l’**heure**
+
+---
+
+# 🌙 Mode sombre
+
+L'application permet de changer entre :
+
+* **Mode clair**
+* **Mode sombre**
+
+Grâce à un bouton dans la barre supérieure de l’application.
+
+---
+
+# 📜 Historique
+
+L’utilisateur peut consulter la liste des présences enregistrées dans l’application avec :
+
+* la **date**
+* l’**heure**
+
+---
+
+# ⚙️ Installation du projet
 
 ### 1️⃣ Cloner le projet
 
-```bash
+```
 git clone https://github.com/ton-repo/pointage_app.git
+```
+
+### 2️⃣ Aller dans le dossier
+
+```
 cd pointage_app
 ```
 
-### 2️⃣ Installer les dépendances
+### 3️⃣ Installer les dépendances
 
-```bash
+```
 flutter pub get
 ```
 
-### 3️⃣ Lancer l'application
+### 4️⃣ Lancer l'application
 
-```bash
+```
 flutter run
 ```
 
 ---
 
-## 📱 Configuration requise
+# 📱 Générer un APK
 
-* Flutter SDK installé
-* Android Studio
-* Android Emulator ou téléphone Android
-* Dart SDK
+Pour créer le fichier APK :
 
----
-
-## 🚀 Compilation APK
-
-Pour générer l’APK :
-
-```bash
+```
 flutter build apk
 ```
 
@@ -91,7 +146,7 @@ build/app/outputs/flutter-apk/app-release.apk
 
 ---
 
-## 👨‍💻 Auteur
+# 👨‍💻 Auteur
 
 Projet réalisé dans le cadre d’un **TP de développement mobile**.
 

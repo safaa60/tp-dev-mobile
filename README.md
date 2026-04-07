@@ -8,11 +8,11 @@ L’utilisateur se connecte à l’application puis **signe directement sur l’
 
 # 📌 Fonctionnalités
 
-* 🔐 Authentification avec **email et mot de passe**
-* ✍️ **Signature sur écran** pour certifier la présence
-* 🌙 **Mode clair / mode sombre**
-* 📜 **Historique des présences**
-* 🚪 **Déconnexion utilisateur**
+* Authentification avec **email et mot de passe**
+* Signature sur écran** pour certifier la présence
+* Mode clair / mode sombre**
+* Historique des présences**
+* Déconnexion utilisateur**
 
 ---
 
@@ -25,7 +25,7 @@ L’utilisateur se connecte à l’application puis **signe directement sur l’
 
 ---
 
-# 📦 Packages utilisés
+# Packages utilisés
 
 | Package            | Description                                  |
 | ------------------ | -------------------------------------------- |
@@ -35,7 +35,7 @@ L’utilisateur se connecte à l’application puis **signe directement sur l’
 
 ---
 
-# 📂 Structure du projet
+#  Structure du projet
 
 ```
 lib/
@@ -55,7 +55,7 @@ lib/
 
 ---
 
-# 🔑 Authentification
+#  Authentification
 
 L'application utilise une **authentification locale** (sans base de données).
 
@@ -68,7 +68,7 @@ Mot de passe : 123456
 
 ---
 
-# ✍️ Validation de présence
+#  Validation de présence
 
 Pour certifier la présence :
 
@@ -93,7 +93,7 @@ Grâce à un bouton dans la barre supérieure de l’application.
 
 ---
 
-# 📜 Historique
+# Historique
 
 L’utilisateur peut consulter la liste des présences enregistrées dans l’application avec :
 
@@ -146,7 +146,7 @@ build/app/outputs/flutter-apk/app-release.apk
 
 ---
 
-# 👨‍💻 Auteur
+#  Auteur
 
 Projet réalisé dans le cadre d’un **TP de développement mobile**.
 
